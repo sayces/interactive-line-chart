@@ -1,7 +1,13 @@
 import styles from "./CustomTooltip.module.css";
 import type { TooltipProps } from "recharts";
 
-export const CustomTooltip: React.FC<TooltipProps<number, string>> = ({
+type CustomTooltipProps = TooltipProps<number, string> & {
+  payload?: any[];
+  active?: boolean;
+  label?: string;
+};
+
+export const CustomTooltip: React.FC<CustomTooltipProps> = ({
   active,
   payload,
   label,
