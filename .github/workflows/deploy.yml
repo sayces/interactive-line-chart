@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on: 
   push: 
-    branches: ['master']
+    branches: ['main']
   workflow_dispatch:
 
 jobs: 
@@ -16,7 +16,7 @@ jobs:
         uses: actions/setup-node@v3
         with: 
           node-version: '24'
-          chche: 'npm'
+          cache: 'npm'
 
       - name: Install deps
         run: npm ci
